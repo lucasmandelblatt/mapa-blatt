@@ -1,0 +1,27 @@
+{
+  "id": "marketing-comunidade",
+  "order": 2,
+  "parent": "marketing",
+  "colorIndex": null,
+  "pos": null,
+  "title": "Comunidade",
+  "description": "Quem já gosta da marca, junto.",
+  "status": "ideia",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794193200000,
+  "boardOrder": 1010,
+  "checklist": [
+    {
+      "id": "x4hh5344",
+      "t": "Grupo de lista VIP para o lançamento",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-26"
+    }
+  ]
+}

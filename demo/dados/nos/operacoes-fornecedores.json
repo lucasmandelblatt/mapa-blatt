@@ -1,0 +1,16 @@
+{
+  "id": "operacoes-fornecedores",
+  "order": 4,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "title": "Fornecedores como relação contínua",
+  "description": "Fornecedor é relação: prazos combinados, histórico e reavaliação.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794117600000,
+  "checklist": []
+}

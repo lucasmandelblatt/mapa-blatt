@@ -1,0 +1,35 @@
+{
+  "id": "marketing-narrativa",
+  "order": 1,
+  "parent": "marketing",
+  "colorIndex": null,
+  "title": "Construção de marca e narrativa",
+  "description": "O que a marca diz e como diz.",
+  "status": "andamento",
+  "owner": "s1",
+  "notes": "**Frase da marca:** \"feito para a cidade que não dorme\".\n\nTom: direto, urbano, sem exagero.",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793833200000,
+  "boardOrder": 1012,
+  "checklist": [
+    {
+      "id": "6vompzom",
+      "t": "Manifesto da marca (1 página)",
+      "done": true,
+      "at": 1793365200000,
+      "owner": "s1",
+      "due": "2026-11-04",
+      "doneAt": 1793797200000
+    },
+    {
+      "id": "75wbbr4q",
+      "t": "Guia de identidade visual",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-22"
+    }
+  ]
+}

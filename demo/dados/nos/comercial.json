@@ -1,0 +1,21 @@
+{
+  "id": "comercial",
+  "order": 2,
+  "parent": "root",
+  "colorIndex": 2,
+  "pos": {
+    "x": 198.6,
+    "y": -36.6,
+    "z": 82.2
+  },
+  "title": "Comercial e Vendas",
+  "description": "Onde e como a marca vende.",
+  "status": "",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794164400000,
+  "checklist": []
+}

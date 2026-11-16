@@ -1,0 +1,36 @@
+{
+  "id": "financeiro-preco",
+  "order": 1,
+  "parent": "financeiro",
+  "colorIndex": null,
+  "title": "Precificação e margem",
+  "description": "Preço de cada peça a partir do custo e da margem desejada.",
+  "status": "andamento",
+  "owner": "s2",
+  "notes": "| Peça | Custo | Preço |\n|---|---|---|\n| Camiseta oversized | R$ 62 | R$ 169 |\n| Camiseta regular | R$ 48 | R$ 139 |\n| Moletom | R$ 118 | R$ 329 |\n\n*Valores fictícios.*",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793764800000,
+  "boardOrder": 1004,
+  "checklist": [
+    {
+      "id": "3efr4edt",
+      "t": "Planilha de custo por peça",
+      "done": true,
+      "at": 1793970000000,
+      "owner": "s2",
+      "due": "2026-11-11",
+      "doneAt": 1794402000000
+    },
+    {
+      "id": "2sywb3wk",
+      "t": "Validar margem mínima de 55%",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-11-20",
+      "flag": "atencao"
+    }
+  ]
+}

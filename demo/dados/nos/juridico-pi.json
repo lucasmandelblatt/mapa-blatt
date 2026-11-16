@@ -1,0 +1,26 @@
+{
+  "id": "juridico-pi",
+  "order": 3,
+  "parent": "juridico",
+  "colorIndex": null,
+  "title": "Propriedade intelectual",
+  "description": "Registro da marca e proteção das estampas.",
+  "status": "ideia",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794808800000,
+  "boardOrder": 1008,
+  "checklist": [
+    {
+      "id": "5lqsaj08",
+      "t": "Pesquisar a marca no INPI",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-25"
+    }
+  ]
+}

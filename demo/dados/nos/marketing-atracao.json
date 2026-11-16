@@ -1,0 +1,47 @@
+{
+  "id": "marketing-atracao",
+  "order": 0,
+  "parent": "marketing",
+  "colorIndex": null,
+  "pos": null,
+  "title": "Atração e aquisição",
+  "description": "Como novas pessoas conhecem a marca.",
+  "status": "afazer",
+  "owner": "s2",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794106800000,
+  "boardOrder": 1009,
+  "checklist": [
+    {
+      "id": "g4zdmen2",
+      "t": "Lista de 20 criadores locais",
+      "done": true,
+      "at": 1794229200000,
+      "owner": "s2",
+      "due": "2026-11-14",
+      "doneAt": 1794661200000
+    },
+    {
+      "id": "khvdgaj8",
+      "t": "Enviar peças-piloto para 5 criadores",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-29",
+      "flag": "atencao",
+      "cost": 600
+    },
+    {
+      "id": "gxbenyjq",
+      "t": "Teste de anúncio de R$ 15 por dia por 7 dias",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-02",
+      "cost": 105
+    }
+  ]
+}

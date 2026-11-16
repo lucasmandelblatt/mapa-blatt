@@ -1,0 +1,17 @@
+{
+  "id": "financeiro-reinvestimento",
+  "order": 4,
+  "parent": "financeiro",
+  "colorIndex": null,
+  "title": "Investimento e reinvestimento",
+  "description": "Quanto do lucro volta para a marca.",
+  "status": "ideia",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794618000000,
+  "boardOrder": 1005,
+  "checklist": []
+}

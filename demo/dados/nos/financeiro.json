@@ -1,0 +1,21 @@
+{
+  "id": "financeiro",
+  "order": 4,
+  "parent": "root",
+  "colorIndex": 4,
+  "pos": {
+    "x": -67.3,
+    "y": 30.4,
+    "z": 200.5
+  },
+  "title": "Financeiro",
+  "description": "Caixa, custos, preço e reinvestimento.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793923200000,
+  "checklist": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "tecnologia-ia-dados",
+  "order": 2,
+  "parent": "tecnologia",
+  "colorIndex": null,
+  "title": "Leitura de dados",
+  "description": "Ler vendas e métricas com IA e resumir a semana.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794333600000,
+  "checklist": []
+}

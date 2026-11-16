@@ -1,0 +1,31 @@
+{
+  "id": "financeiro-caixa",
+  "order": 0,
+  "parent": "financeiro",
+  "colorIndex": null,
+  "pos": {
+    "x": -23.2,
+    "y": -13.4,
+    "z": 45.3
+  },
+  "title": "DRE - Indicadores",
+  "description": "Resultado do mês e indicadores principais.",
+  "status": "",
+  "owner": "s2",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794279600000,
+  "checklist": [
+    {
+      "id": "plpft75v",
+      "t": "Fechar o resultado de outubro",
+      "done": true,
+      "at": 1793538000000,
+      "owner": "s2",
+      "due": "2026-11-06",
+      "doneAt": 1793970000000
+    }
+  ]
+}

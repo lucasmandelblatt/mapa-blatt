@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-16",
+  "tasks": [
+    {
+      "t": "Ligar para a estamparia",
+      "at": 1794834000000,
+      "id": "rdl1erbf",
+      "done": false,
+      "node": "produto-fornecimento",
+      "owner": "s1"
+    },
+    {
+      "t": "Postar bastidor no Instagram",
+      "at": 1794834000000,
+      "id": "qfoeqh3a",
+      "done": true,
+      "node": "marketing-conteudo",
+      "owner": "s1",
+      "doneAt": 1794841200000
+    }
+  ],
+  "updatedAt": 1794834000000
+}

@@ -1,0 +1,16 @@
+{
+  "id": "juridico-fiscal",
+  "order": 2,
+  "parent": "juridico",
+  "colorIndex": null,
+  "title": "Obrigações fiscais recorrentes",
+  "description": "Impostos e obrigações do mês.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794006000000,
+  "checklist": []
+}

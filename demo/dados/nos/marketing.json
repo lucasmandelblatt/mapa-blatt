@@ -1,0 +1,16 @@
+{
+  "id": "marketing",
+  "order": 3,
+  "parent": "root",
+  "colorIndex": 3,
+  "title": "Marketing e Marca",
+  "description": "Marca, conteúdo, comunidade e números.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794474000000,
+  "checklist": []
+}

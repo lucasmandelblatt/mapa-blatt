@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sistema Blatt</title>
+<link rel="icon" href="/marca/blatt-logo.svg">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="/vendor/icones/style.css">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="scene" aria-label="Mapa 3D da empresa"></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- barra superior: marca, vistas e ações, cada grupo numa cápsula de vidro -->
+<div class="topbar">
+  <header class="brand island">
+    <span class="logo" id="logo" aria-label="Blatt"></span>
+    <span class="brand-sub">Sistema</span>
+    <span class="save" id="save" role="status" aria-live="polite" data-state="idle"></span>
+    <span class="gh-sync" id="gh-sync" data-state="parado" title="GitHub" hidden><i class="ph-light ph-github-logo"></i></span>
+  </header>
+
+  <nav class="nav island" aria-label="Vistas">
+    <div class="seg" role="tablist" id="views">
+      <button role="tab" data-view="mapa" aria-selected="true" style="--v:var(--blue)"><i class="ph-light ph-planet"></i><span>Sistema</span></button>
+      <button role="tab" data-view="quadro" aria-selected="false" style="--v:var(--orange)"><i class="ph-light ph-kanban"></i><span>Quadro</span></button>
+      <button role="tab" data-view="controle" aria-selected="false" style="--v:var(--green)"><i class="ph-light ph-list-checks"></i><span>Controle</span></button>
+      <button role="tab" data-view="indice" aria-selected="false" style="--v:var(--purple)"><i class="ph-light ph-squares-four"></i><span>Índice</span></button>
+      <span class="seg-ink" aria-hidden="true"></span>
+    </div>
+  </nav>
+
+  <div class="actions island" aria-label="Ações">
+    <button class="search-btn" id="open-search" aria-label="Buscar">
+      <i class="ph-light ph-magnifying-glass"></i><span>Buscar</span><kbd>⌘K</kbd>
+    </button>
+    <button class="tool-btn" id="filter-btn" aria-label="Filtrar" aria-expanded="false" title="Filtrar"><i class="ph-light ph-funnel-simple"></i><b class="badge" id="filter-badge" hidden></b></button>
+    <button class="save-all" id="save-all" data-state="clean" title="Salvar tudo (⌘S)"><i class="ph-light ph-floppy-disk"></i><span>Salvar</span></button>
+  </div>
+</div>
+
+<!-- filtros -->
+<aside class="filters island" id="filters" aria-label="Filtros" hidden>
+  <div class="filter-row" id="f-owner"><span class="f-k">Dono</span>
+    <button data-v="" aria-pressed="true">Todos</button>
+    <button data-v="s1" aria-pressed="false"><b class="who l" data-ini="s1">1</b><span data-nome="s1">Sócio 1</span></button>
+    <button data-v="s2" aria-pressed="false"><b class="who e" data-ini="s2">2</b><span data-nome="s2">Sócio 2</span></button>
+    <button data-v="none" aria-pressed="false">Sem dono</button>
+  </div>
+  <div class="filter-row" id="f-status"><span class="f-k">Status</span>
+    <button data-v="" aria-pressed="true">Todos</button>
+    <button data-v="ideia" aria-pressed="false">Ideia</button>
+    <button data-v="afazer" aria-pressed="false">A fazer</button>
+    <button data-v="andamento" aria-pressed="false">Andamento</button>
+    <button data-v="aprovacao" aria-pressed="false">Aprovação</button>
+    <button data-v="feito" aria-pressed="false">Feito</button>
+  </div>
+</aside>
+
+<!-- legenda das áreas -->
+<aside class="legend island" id="legend" aria-label="Áreas"></aside>
+
+<!-- controles da câmera -->
+<div class="cam island" aria-label="Câmera">
+  <button id="cam-spin" aria-pressed="true" title="Girar sozinho"><i class="ph-light ph-pause"></i></button>
+  <button id="cam-home" title="Voltar ao centro"><i class="ph-light ph-crosshair"></i></button>
+</div>
+
+<!-- índice -->
+<section class="index" id="index" hidden aria-label="Índice"></section>
+
+<!-- quadro -->
+<section class="board" id="board" hidden aria-label="Quadro"></section>
+
+<!-- controle: checklist de cada bloco -->
+<section class="ctrl-view" id="controle" hidden aria-label="Controle"></section>
+
+<!-- menu de contexto do mapa -->
+<div class="menu" id="menu" hidden role="menu"></div>
+
+<!-- dica de primeira visita -->
+<div class="hint-pill" id="hint" hidden><i class="ph-light ph-hand-grabbing"></i><span>Arraste planetas e estrelas para reposicionar. Solte uma estrela perto de outro planeta para mudá-la de órbita. Botão direito cria, renomeia, colore e move.</span><button aria-label="Entendi">Entendi</button></div>
+
+<!-- nome de bloco novo -->
+<div class="modal" id="ask" hidden>
+  <form class="modal-box" id="ask-f" role="dialog" aria-labelledby="ask-t">
+    <h3 id="ask-t"></h3>
+    <label class="ask-l" for="ask-i" id="ask-l"></label>
+    <input id="ask-i" class="ask-i" autocomplete="off">
+    <div class="modal-actions"><button type="button" class="btn ghost" id="ask-x">Cancelar</button><button type="submit" class="btn">Criar</button></div>
+  </form>
+</div>
+
+<!-- dossiê do bloco -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-shell"><div class="drawer-core" id="drawer-core"></div></div>
+</aside>
+
+<!-- busca -->
+<div class="palette" id="palette" hidden>
+  <div class="palette-box" role="dialog" aria-label="Buscar no mapa">
+    <div class="palette-input"><i class="ph-light ph-magnifying-glass"></i><input id="q" placeholder="Buscar blocos, notas e tarefas" autocomplete="off" aria-label="Buscar"></div>
+    <ul id="results" role="listbox"></ul>
+  </div>
+</div>
+
+<!-- confirmação -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-box" role="alertdialog" aria-labelledby="modal-t">
+    <h3 id="modal-t"></h3><p id="modal-p"></p>
+    <div class="modal-actions"><button class="btn ghost" id="modal-no">Cancelar</button><button class="btn danger" id="modal-yes">Apagar</button></div>
+  </div>
+</div>
+
+<!-- visualizador de fotos -->
+<div class="lightbox" id="lightbox" hidden><img alt=""><button class="lb-x" aria-label="Fechar"><i class="ph-light ph-x"></i></button></div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="boot" id="boot"><span>Carregando o sistema</span></div>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>

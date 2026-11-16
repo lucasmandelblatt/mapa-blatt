@@ -1,0 +1,21 @@
+{
+  "id": "juridico",
+  "order": 5,
+  "parent": "root",
+  "colorIndex": 5,
+  "pos": {
+    "x": -198.6,
+    "y": -36.9,
+    "z": 82.4
+  },
+  "title": "Jurídico e Administrativo",
+  "description": "Formalização, contratos, impostos e marca registrada.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794096000000,
+  "checklist": []
+}

@@ -1,0 +1,16 @@
+{
+  "id": "tecnologia",
+  "order": 7,
+  "parent": "root",
+  "colorIndex": 7,
+  "title": "Tecnologia e Automação",
+  "description": "Ferramentas e automações com IA.",
+  "status": "",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794052800000,
+  "checklist": []
+}

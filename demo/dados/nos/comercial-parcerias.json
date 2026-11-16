@@ -1,0 +1,16 @@
+{
+  "id": "comercial-parcerias",
+  "order": 3,
+  "parent": "comercial",
+  "colorIndex": null,
+  "title": "Parcerias e canais alternativos",
+  "description": "Lojas parceiras, collabs e revenda.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793822400000,
+  "checklist": []
+}

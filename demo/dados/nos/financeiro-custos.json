@@ -1,0 +1,25 @@
+{
+  "id": "financeiro-custos",
+  "order": 3,
+  "parent": "financeiro",
+  "colorIndex": null,
+  "title": "Custos e Despesas",
+  "description": "Custos fixos e variáveis.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794006000000,
+  "checklist": [
+    {
+      "id": "seh60kvj",
+      "t": "Listar custos fixos mensais",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-24"
+    }
+  ]
+}

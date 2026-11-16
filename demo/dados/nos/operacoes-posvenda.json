@@ -1,0 +1,30 @@
+{
+  "id": "operacoes-posvenda",
+  "order": 2,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "pos": {
+    "x": -7.1,
+    "y": -27.4,
+    "z": -46.4
+  },
+  "title": "Pós-venda operacional",
+  "description": "Trocas, devoluções e acompanhamento do pedido.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793959200000,
+  "checklist": [
+    {
+      "id": "wj99ibag",
+      "t": "Escrever a política de trocas",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-07"
+    }
+  ]
+}

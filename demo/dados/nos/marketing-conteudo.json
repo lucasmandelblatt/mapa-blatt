@@ -1,0 +1,35 @@
+{
+  "id": "marketing-conteudo",
+  "order": 3,
+  "parent": "marketing",
+  "colorIndex": null,
+  "title": "Calendário e produção de conteúdo",
+  "description": "Calendário de posts e produção de fotos.",
+  "status": "afazer",
+  "owner": "ambos",
+  "notes": "| Semana | Tema |\n|---|---|\n| 1 | Bastidores das estampas |\n| 2 | Teaser das peças |\n| 3 | Lançamento |",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794258000000,
+  "boardOrder": 1011,
+  "checklist": [
+    {
+      "id": "fjgvq4k7",
+      "t": "Ensaio de fotos da coleção",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-12-03",
+      "cost": 900
+    },
+    {
+      "id": "bn7xj8b7",
+      "t": "Agendar 12 posts do pré-lançamento",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-12-05"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# dependências (npm install recria)
+node_modules
+
+# Seus dados ficam só no seu computador (ou no seu Supabase).
+# O repositório traz apenas o bloco da empresa em branco, para o sistema abrir vazio.
+dados/*
+!dados/nos/
+dados/nos/*
+!dados/nos/root.json
+!dados/dias/
+dados/dias/*
+!dados/dias/.gitkeep
+!dados/anexos/
+dados/anexos/*
+!dados/anexos/.gitkeep
+
+# cópias antigas e geradas
+backup-*/
+dist-artefato/
+
+# configuração local de cada computador (senha, chaves do Supabase)
+config.json
+
+.DS_Store

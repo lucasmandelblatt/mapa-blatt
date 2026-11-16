@@ -1,0 +1,26 @@
+{
+  "id": "tecnologia-ia-atendimento",
+  "order": 1,
+  "parent": "tecnologia",
+  "colorIndex": null,
+  "title": "Atendimento básico",
+  "description": "Respostas prontas para dúvidas frequentes.",
+  "status": "ideia",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794056400000,
+  "boardOrder": 1018,
+  "checklist": [
+    {
+      "id": "mwufxbv9",
+      "t": "Listar as 10 dúvidas mais prováveis",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-01"
+    }
+  ]
+}

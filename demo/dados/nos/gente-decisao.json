@@ -1,0 +1,27 @@
+{
+  "id": "gente-decisao",
+  "order": 0,
+  "parent": "gente",
+  "colorIndex": null,
+  "title": "Ritual de decisão",
+  "description": "Reunião semanal de 30 minutos: o que avançou, o que trava, o que decidir.",
+  "status": "feito",
+  "owner": "ambos",
+  "notes": "### Pauta fixa\n1. O que foi feito\n2. O que está atrasado\n3. Uma decisão da semana",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794722400000,
+  "boardOrder": 1006,
+  "checklist": [
+    {
+      "id": "nsipzz5f",
+      "t": "Primeira reunião semanal",
+      "done": true,
+      "at": 1793797200000,
+      "owner": "ambos",
+      "due": "2026-11-09",
+      "doneAt": 1794229200000
+    }
+  ]
+}

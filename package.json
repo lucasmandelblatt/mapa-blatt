@@ -1,0 +1,23 @@
+{
+  "name": "mapa-blatt",
+  "version": "1.0.0",
+  "description": "Mapa da Blatt: segundo cérebro 3D da empresa",
+  "license": "MIT",
+  "scripts": {
+    "build": "esbuild src/main.js --bundle --format=esm --minify --target=es2022 --define:__RO__=false --outfile=public/app.js",
+    "start": "node server.mjs",
+    "dev": "npm run build && node server.mjs",
+    "demo": "BLATT_DEMO=1 BLATT_DADOS=demo/dados BLATT_SAIDA=docs/demo node scripts/artefato.mjs"
+  },
+  "type": "module",
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "5.3.0",
+    "@phosphor-icons/web": "2.1.2",
+    "3d-force-graph": "1.80.1",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "private": true
+}

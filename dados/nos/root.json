@@ -1,0 +1,17 @@
+{
+  "id": "root",
+  "parent": null,
+  "title": "Sua empresa",
+  "description": "",
+  "notes": "",
+  "owner": "",
+  "status": "",
+  "socios": [],
+  "checklist": [],
+  "links": [],
+  "files": [],
+  "order": 0,
+  "colorIndex": null,
+  "createdAt": 1794869237452,
+  "updatedAt": 1794869237452
+}

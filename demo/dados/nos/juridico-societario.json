@@ -1,0 +1,25 @@
+{
+  "id": "juridico-societario",
+  "order": 1,
+  "parent": "juridico",
+  "colorIndex": null,
+  "title": "Contratos e societário",
+  "description": "Regras entre os sócios.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794150000000,
+  "checklist": [
+    {
+      "id": "ui6d39zz",
+      "t": "Rascunhar regras de decisão entre os sócios",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-12-06"
+    }
+  ]
+}

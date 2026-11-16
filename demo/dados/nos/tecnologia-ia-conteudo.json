@@ -1,0 +1,35 @@
+{
+  "id": "tecnologia-ia-conteudo",
+  "order": 0,
+  "parent": "tecnologia",
+  "colorIndex": null,
+  "title": "Conteúdo e comunicação",
+  "description": "IA para legendas, roteiros e variações de anúncio.",
+  "status": "andamento",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793988000000,
+  "boardOrder": 1019,
+  "checklist": [
+    {
+      "id": "2byv7s6e",
+      "t": "Prompt de legenda no tom da marca",
+      "done": true,
+      "at": 1794315600000,
+      "owner": "s1",
+      "due": "2026-11-15",
+      "doneAt": 1794747600000
+    },
+    {
+      "id": "hogfqrcl",
+      "t": "Gerar 3 variações de anúncio por peça",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-22"
+    }
+  ]
+}

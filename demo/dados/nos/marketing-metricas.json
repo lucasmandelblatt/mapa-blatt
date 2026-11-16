@@ -1,0 +1,25 @@
+{
+  "id": "marketing-metricas",
+  "order": 4,
+  "parent": "marketing",
+  "colorIndex": null,
+  "title": "Métricas e performance",
+  "description": "Números que importam: alcance, cliques, vendas por canal.",
+  "status": "",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794283200000,
+  "checklist": [
+    {
+      "id": "fq7xkwo8",
+      "t": "Painel semanal com 5 números",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-08"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Entrar no Sistema Blatt</title>
+<link rel="icon" href="/marca/blatt-logo.svg">
+<link rel="stylesheet" href="/vendor/icones/style.css">
+<link rel="stylesheet" href="/style.css">
+<style>
+  body{display:grid; place-items:center; min-height:100%; padding:24px; --accent:var(--blue)}
+  .box{width:min(400px, 100%); padding:32px 28px 28px; border-radius:var(--r-xl); background:var(--glass-thick); border:.5px solid var(--edge);
+    backdrop-filter:blur(40px) saturate(1.8); -webkit-backdrop-filter:blur(40px) saturate(1.8); box-shadow:var(--shadow-2); animation:materialize .55s var(--spring)}
+  .logo{width:96px; color:var(--ink); line-height:0; margin-bottom:24px}
+  .logo svg{width:100%; height:auto}
+  .box .lead{margin:10px 0 24px; color:var(--muted); font-size:14.5px; line-height:1.5}
+  .f{display:flex; align-items:center; gap:8px; height:50px; padding:0 6px 0 16px; border-radius:var(--r-md); background:rgba(0,0,0,.35); border:.5px solid var(--hair-2); transition:box-shadow .3s, border-color .3s}
+  .f:focus-within{border-color:color-mix(in srgb, var(--blue) 60%, transparent); box-shadow:0 0 0 4px color-mix(in srgb, var(--blue) 18%, transparent)}
+  .f.bad{border-color:var(--red); animation:shake .4s var(--spring)}
+  .f input{flex:1; min-width:0; border:0; background:none; outline:none; font-size:16px}
+  .f button{width:38px; height:38px; border-radius:999px; display:grid; place-items:center; background:var(--blue); color:#fff; transition:transform .12s ease-out, opacity .2s}
+  .f button:active{transform:scale(.9)}
+  .f button[disabled]{opacity:.5}
+  .f button i{font-size:18px}
+  .msg{min-height:20px; margin:12px 2px 0; font-size:13px; color:var(--red)}
+  @keyframes shake{20%{transform:translateX(-6px)} 40%{transform:translateX(5px)} 60%{transform:translateX(-3px)} 80%{transform:translateX(2px)}}
+</style>
+</head>
+<body>
+<form class="box" id="f">
+  <div class="logo" id="logo" aria-label="Blatt"></div>
+  <h1 class="hl sm"><b>Sistema Blatt.</b> <span>Entre para continuar.</span></h1>
+  <p class="lead">Use a senha combinada entre os sócios. Este computador fica conectado por seis meses.</p>
+  <label class="f" id="campo"><i class="ph-light ph-lock-simple" style="color:var(--faint)"></i><input id="senha" type="password" placeholder="Senha" autocomplete="current-password" aria-label="Senha" autofocus><button id="go" type="submit" aria-label="Entrar"><i class="ph-light ph-arrow-right"></i></button></label>
+  <p class="msg" id="msg" role="alert"></p>
+</form>
+<script>
+const $ = s => document.querySelector(s);
+fetch('/marca/blatt-logo.svg').then(r => r.text()).then(svg => { $('#logo').innerHTML = svg; }).catch(() => {});
+$('#f').onsubmit = async e => {
+  e.preventDefault();
+  const go = $('#go'); go.disabled = true; $('#msg').textContent = ''; $('#campo').classList.remove('bad');
+  try {
+    const r = await fetch('/api/entrar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ senha: $('#senha').value }) });
+    if (r.ok) { location.href = '/'; return; }
+    const b = await r.json().catch(() => ({}));
+    $('#msg').textContent = b.erro || 'Não foi possível entrar';
+    void $('#campo').offsetWidth; $('#campo').classList.add('bad'); $('#senha').select();
+  } catch { $('#msg').textContent = 'O sistema não respondeu. Confira a internet e tente de novo.'; }
+  finally { go.disabled = false; }
+};
+</script>
+</body>
+</html>

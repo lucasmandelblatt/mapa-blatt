@@ -1,0 +1,79 @@
+{
+  "id": "produto-concepcao",
+  "order": 0,
+  "parent": "produto",
+  "colorIndex": null,
+  "pos": {
+    "x": 18.2,
+    "y": -9.4,
+    "z": -52.6
+  },
+  "title": "Coleção 1",
+  "description": "Primeira coleção: 6 peças, 2 modelagens de camiseta, 1 moletom.",
+  "status": "andamento",
+  "owner": "s1",
+  "notes": "### Conceito\nCidade à noite, tipografia grande, paleta preto, off-white e verde-musgo.\n\n### Peças\n- Camiseta oversized (3 estampas)\n- Camiseta regular (2 estampas)\n- Moletom canguru (1 estampa)",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794798000000,
+  "boardOrder": 1016,
+  "checklist": [
+    {
+      "id": "2lajlj4h",
+      "t": "Fechar o moodboard da coleção",
+      "done": true,
+      "at": 1792674000000,
+      "owner": "s1",
+      "due": "2026-10-27",
+      "doneAt": 1793106000000
+    },
+    {
+      "id": "9du7794g",
+      "t": "Desenhar as 6 estampas",
+      "done": true,
+      "at": 1793624400000,
+      "owner": "s1",
+      "due": "2026-11-07",
+      "doneAt": 1794056400000
+    },
+    {
+      "id": "9dpmrcg6",
+      "t": "Aprovar a paleta com o fornecedor de tecido",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-11-19",
+      "flag": "atencao"
+    },
+    {
+      "id": "29be2u66",
+      "t": "Pedir peça-piloto da oversized",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-22",
+      "cost": 180
+    },
+    {
+      "id": "mr26846p",
+      "t": "Provar a piloto e ajustar a grade P ao GG",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-28"
+    },
+    {
+      "id": "7q9m2i0h",
+      "t": "Fechar ficha técnica das 6 peças",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-01"
+    }
+  ],
+  "plan": {
+    "inicio": "2026-10-17",
+    "fim": "2026-12-31"
+  }
+}

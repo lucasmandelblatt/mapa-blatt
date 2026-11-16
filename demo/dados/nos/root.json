@@ -1,0 +1,20 @@
+{
+  "id": "root",
+  "order": 0,
+  "parent": null,
+  "colorIndex": null,
+  "title": "Marca exemplo",
+  "description": "Marca exemplo: streetwear brasileiro com tiragens curtas. Todos os dados deste mapa são fictícios, criados para demonstração.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "## Marca exemplo\n\nStreetwear com tiragens curtas e estampas autorais.\n\n**Meta do semestre:** lançar a Coleção 1 com 6 peças e vender 300 unidades em 90 dias.\n\n> Dados fictícios para demonstração do sistema.",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794207600000,
+  "checklist": [],
+  "socios": [
+    "Marina",
+    "Rafael"
+  ]
+}

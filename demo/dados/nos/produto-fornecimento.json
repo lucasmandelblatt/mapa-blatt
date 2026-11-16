@@ -1,0 +1,50 @@
+{
+  "id": "produto-fornecimento",
+  "order": 1,
+  "parent": "produto",
+  "colorIndex": null,
+  "pos": {
+    "x": -13.8,
+    "y": 12.9,
+    "z": -52.8
+  },
+  "title": "Cadeia de fornecimento",
+  "description": "Malharia, estamparia e acabamento: quem faz o quê, em quanto tempo.",
+  "status": "afazer",
+  "owner": "s2",
+  "notes": "| Etapa | Fornecedor | Prazo |\n|---|---|---|\n| Malha | Malharia Exemplo | 10 dias |\n| Estampa | Estúdio Silk Exemplo | 7 dias |\n| Etiqueta | Etiquetas Exemplo | 5 dias |",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794110400000,
+  "boardOrder": 1017,
+  "checklist": [
+    {
+      "id": "2uep1ent",
+      "t": "Cotar malha 100% algodão 30.1 com 3 fornecedores",
+      "done": true,
+      "at": 1793883600000,
+      "owner": "s2",
+      "due": "2026-11-10",
+      "doneAt": 1794315600000
+    },
+    {
+      "id": "hjxjqi3o",
+      "t": "Visitar a estamparia",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-18",
+      "flag": "urgente"
+    },
+    {
+      "id": "gz5kok16",
+      "t": "Negociar lote mínimo de 50 peças por estampa",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-24",
+      "flag": "atencao"
+    }
+  ]
+}

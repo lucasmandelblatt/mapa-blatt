@@ -1,0 +1,33 @@
+{
+  "id": "produto-catalogo",
+  "order": 2,
+  "parent": "produto",
+  "colorIndex": null,
+  "title": "Gestão do catálogo",
+  "description": "Nomes, fotos, medidas e descrições de cada peça.",
+  "status": "ideia",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794387600000,
+  "boardOrder": 1015,
+  "checklist": [
+    {
+      "id": "uq80idw3",
+      "t": "Definir padrão de nome das peças",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-12-04"
+    },
+    {
+      "id": "706i8j76",
+      "t": "Tabela de medidas por modelagem",
+      "done": false,
+      "at": 1794402000000,
+      "due": "2026-12-06"
+    }
+  ]
+}

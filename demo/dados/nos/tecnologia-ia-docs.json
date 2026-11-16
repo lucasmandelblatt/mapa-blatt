@@ -1,0 +1,16 @@
+{
+  "id": "tecnologia-ia-docs",
+  "order": 3,
+  "parent": "tecnologia",
+  "colorIndex": null,
+  "title": "Documentação e registro",
+  "description": "Registro das decisões e dos processos.",
+  "status": "",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794592800000,
+  "checklist": []
+}

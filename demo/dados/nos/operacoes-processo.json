@@ -1,0 +1,25 @@
+{
+  "id": "operacoes-processo",
+  "order": 3,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "title": "Capacidade e processo interno",
+  "description": "Quanto a dupla consegue produzir e enviar por semana.",
+  "status": "",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793862000000,
+  "checklist": [
+    {
+      "id": "i1mnbqns",
+      "t": "Medir tempo de embalar um pedido",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-12-11"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "comercial-conversao",
+  "order": 1,
+  "parent": "comercial",
+  "colorIndex": null,
+  "title": "Processo de conversão",
+  "description": "Do visitante ao pedido: página, frete e pagamento.",
+  "status": "afazer",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794740400000,
+  "boardOrder": 1002,
+  "checklist": [
+    {
+      "id": "oc9is0j8",
+      "t": "Testar o checkout no celular",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s1",
+      "due": "2026-11-20",
+      "flag": "urgente"
+    },
+    {
+      "id": "ht9lgmxg",
+      "t": "Frete grátis acima de R$ 300?",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-11-23"
+    }
+  ]
+}

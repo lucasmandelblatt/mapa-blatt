@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>Conectar o banco de dados</title>
+<link rel="icon" href="/marca/blatt-logo.svg">
+<link rel="stylesheet" href="/vendor/icones/style.css">
+<link rel="stylesheet" href="/style.css">
+<style>
+  body{overflow:auto; --accent:var(--green)}
+  .cx{max-width:760px; margin:0 auto; padding:72px 24px 96px}
+  .cx .back{display:flex; width:fit-content; align-items:center; gap:6px; color:var(--muted); text-decoration:none; font-size:13.5px; margin-bottom:28px}
+  .cx .back:hover{color:var(--ink)}
+  .cx .lead{margin:16px 0 36px; color:var(--muted); font-size:15.5px; line-height:1.55; max-width:60ch}
+  .step{display:grid; grid-template-columns:36px 1fr; gap:16px; padding:22px; margin-bottom:12px; border-radius:var(--r-lg); background:rgba(28,28,30,.7); border:.5px solid var(--hair)}
+  .step .n{width:32px; height:32px; border-radius:999px; display:grid; place-items:center; font-weight:700; font-size:14px; background:color-mix(in srgb, var(--green) 22%, transparent); color:var(--green)}
+  .step h2{margin:4px 0 6px; font-size:17px; font-weight:700; letter-spacing:-.015em}
+  .step p{margin:0 0 12px; color:var(--muted); font-size:14px; line-height:1.55}
+  .step ol{margin:0 0 12px; padding-left:18px; color:var(--muted); font-size:14px; line-height:1.7}
+  .step b{color:var(--ink); font-weight:600}
+  .step a{color:var(--blue)}
+  .acts{display:flex; flex-wrap:wrap; gap:8px}
+  .f{display:grid; gap:6px; margin-bottom:14px}
+  .f label{font-size:13px; font-weight:600}
+  .f input{height:44px; padding:0 14px; border-radius:var(--r-sm); border:.5px solid var(--hair-2); background:rgba(0,0,0,.35); outline:none; font-size:15px; font-family:var(--mono); transition:box-shadow .3s, border-color .3s}
+  .f input:focus{border-color:color-mix(in srgb, var(--green) 55%, transparent); box-shadow:0 0 0 4px color-mix(in srgb, var(--green) 14%, transparent)}
+  .f.bad input{border-color:var(--red); box-shadow:0 0 0 4px color-mix(in srgb, var(--red) 14%, transparent)}
+  .f small{font-size:12px; color:var(--faint)}
+  .msg{margin-top:14px; padding:14px 16px; border-radius:var(--r-md); font-size:14px; line-height:1.5; animation:materialize .4s var(--spring)}
+  .msg.err{background:color-mix(in srgb, var(--red) 14%, transparent); border:.5px solid color-mix(in srgb, var(--red) 45%, transparent)}
+  .msg.ok{background:color-mix(in srgb, var(--green) 14%, transparent); border:.5px solid color-mix(in srgb, var(--green) 45%, transparent)}
+  .done{display:grid; gap:14px; padding:28px; border-radius:var(--r-xl); background:color-mix(in srgb, var(--green) 10%, rgba(28,28,30,.7)); border:.5px solid color-mix(in srgb, var(--green) 40%, transparent); animation:materialize .5s var(--spring)}
+  .done i{font-size:40px; color:var(--green)}
+  .btn.go{background:var(--green); color:#000; height:44px; padding:0 22px; font-size:15px}
+  .btn[disabled]{opacity:.55; pointer-events:none}
+</style>
+</head>
+<body data-view="controle">
+<main class="cx">
+  <a class="back" href="/"><i class="ph-light ph-caret-left"></i>Voltar ao sistema</a>
+  <p class="eyebrow"><i class="ph-light ph-database"></i>Banco de dados</p>
+  <h1 class="hl"><b>Conectar o Supabase.</b> <span>Os dados, as fotos e as edições num banco de verdade.</span></h1>
+  <p class="lead">São três passos e leva uns cinco minutos. Os dados que estão hoje no sistema vão para o banco sozinhos, e o GitHub continua guardando o código e um backup por dia.</p>
+
+  <div id="status"></div>
+
+  <section class="step" id="passos">
+    <span class="n">1</span>
+    <div>
+      <h2>Crie o projeto no Supabase</h2>
+      <ol>
+        <li>Abra <a href="https://supabase.com/dashboard/new" target="_blank" rel="noopener">supabase.com/dashboard</a> e entre (pode usar <b>Continue with GitHub</b>).</li>
+        <li>Crie um projeto: nome <b>blatt</b>, uma senha qualquer para o banco (guarde-a) e a região <b>South America (São Paulo)</b>.</li>
+        <li>Espere um ou dois minutos até o projeto ficar pronto.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="step">
+    <span class="n">2</span>
+    <div>
+      <h2>Crie a estrutura do banco</h2>
+      <ol>
+        <li>Clique em <b>Copiar SQL</b> abaixo.</li>
+        <li>No projeto, abra <b>SQL Editor</b> (menu da esquerda), cole o texto e clique em <b>Run</b>.</li>
+        <li>Deve aparecer <b>Success. No rows returned</b>.</li>
+      </ol>
+      <div class="acts"><button class="btn ghost" id="copy-sql"><i class="ph-light ph-copy"></i><span>Copiar SQL</span></button></div>
+    </div>
+  </section>
+
+  <section class="step">
+    <span class="n">3</span>
+    <div>
+      <h2>Cole o endereço e a chave</h2>
+      <p>No projeto, abra <b>Project Settings</b> (engrenagem), depois <b>Data API</b> para o endereço e <b>API Keys</b> para a chave. Use a chave <b>secret</b> (começa com <code>sb_secret_</code>) ou, em projetos antigos, a <b>service_role</b>. Ela fica guardada só neste computador e nunca vai para o GitHub.</p>
+      <form id="f" autocomplete="off">
+        <div class="f" id="f-url"><label for="url">Endereço do projeto (Project URL)</label><input id="url" placeholder="https://abcdefghij.supabase.co" spellcheck="false"><small>Termina em .supabase.co</small></div>
+        <div class="f" id="f-chave"><label for="chave">Chave secreta</label><input id="chave" type="password" placeholder="sb_secret_..." spellcheck="false"><small>Não use a chave publicável (sb_publishable_).</small></div>
+        <button class="btn go" id="go" type="submit"><i class="ph-light ph-plugs-connected"></i><span>Conectar e migrar os dados</span></button>
+      </form>
+      <div id="msg"></div>
+    </div>
+  </section>
+</main>
+<script>
+const $ = s => document.querySelector(s);
+fetch('/api/supabase').then(r => r.json()).then(s => {
+  if (!s.conectado) return;
+  $('#status').innerHTML = `<div class="msg ok" style="margin:0 0 20px"><b>Já conectado</b> ao projeto <b>${s.projeto}</b>. Conectar de novo só troca a configuração; os dados que já estão no banco ficam como estão.</div>`;
+});
+$('#copy-sql').onclick = async () => {
+  const sql = await (await fetch('/api/supabase/sql')).text();
+  try { await navigator.clipboard.writeText(sql); }
+  catch { const t = document.createElement('textarea'); t.value = sql; document.body.appendChild(t); t.select(); document.execCommand('copy'); t.remove(); }
+  $('#copy-sql span').textContent = 'SQL copiado';
+  setTimeout(() => $('#copy-sql span').textContent = 'Copiar SQL', 2500);
+};
+$('#f').onsubmit = async e => {
+  e.preventDefault();
+  document.querySelectorAll('.f').forEach(x => x.classList.remove('bad'));
+  const go = $('#go'); go.disabled = true; go.querySelector('span').textContent = 'Conectando e migrando…';
+  $('#msg').innerHTML = '';
+  try {
+    const r = await fetch('/api/supabase/conectar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ url: $('#url').value, chave: $('#chave').value }) });
+    const b = await r.json();
+    if (!r.ok) {
+      if (b.campo === 'url' || b.campo === 'chave') $('#f-' + b.campo).classList.add('bad');
+      $('#msg').innerHTML = `<div class="msg err">${b.erro}</div>`;
+      return;
+    }
+    const m = b.migrado;
+    $('#chave').value = '';
+    document.querySelector('main').innerHTML = `<div class="done"><i class="ph-light ph-check-circle"></i>
+      <h1 class="hl sm"><b>Banco de dados conectado.</b> <span>Daqui pra frente tudo fica no Supabase.</span></h1>
+      <p style="margin:0;color:var(--muted);font-size:15px;line-height:1.55">${m.jaTinha ? `O banco já tinha ${m.jaTinha} blocos, então nada foi copiado por cima.` : `Migrados: <b>${m.nos} blocos</b>, ${m.dias} dia${m.dias === 1 ? '' : 's'} de tarefas e ${m.anexos} anexo${m.anexos === 1 ? '' : 's'}.${m.faltando ? ` ${m.faltando} anexo${m.faltando === 1 ? '' : 's'} não estava${m.faltando === 1 ? '' : 'm'} na pasta e ficou de fora.` : ''}`}</p>
+      <div class="acts"><a class="btn go" href="/"><i class="ph-light ph-planet"></i>Abrir o sistema</a></div></div>`;
+  } catch (er) {
+    $('#msg').innerHTML = `<div class="msg err">O sistema não respondeu. Confira se a janela que mantém o sistema ligado continua aberta.</div>`;
+  } finally { go.disabled = false; go.querySelector('span').textContent = 'Conectar e migrar os dados'; }
+};
+</script>
+</body>
+</html>

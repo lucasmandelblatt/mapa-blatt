@@ -1,0 +1,16 @@
+{
+  "id": "produto",
+  "order": 0,
+  "parent": "root",
+  "colorIndex": 0,
+  "title": "Produto e Design",
+  "description": "Tudo o que define as peças: coleção, modelagens, fornecedores e catálogo.",
+  "status": "",
+  "owner": "s1",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794088800000,
+  "checklist": []
+}

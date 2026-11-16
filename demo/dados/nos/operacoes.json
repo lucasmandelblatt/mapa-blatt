@@ -1,0 +1,16 @@
+{
+  "id": "operacoes",
+  "order": 1,
+  "parent": "root",
+  "colorIndex": 1,
+  "title": "Operações",
+  "description": "Produção, estoque, envio e pós-venda.",
+  "status": "",
+  "owner": "s2",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793908800000,
+  "checklist": []
+}

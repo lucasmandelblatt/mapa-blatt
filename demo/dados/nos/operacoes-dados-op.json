@@ -1,0 +1,21 @@
+{
+  "id": "operacoes-dados-op",
+  "order": 5,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "pos": {
+    "x": 35.8,
+    "y": -8,
+    "z": -39.8
+  },
+  "title": "Dados operacionais",
+  "description": "Indicadores de operação: prazo médio, trocas, atrasos.",
+  "status": "",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794196800000,
+  "checklist": []
+}

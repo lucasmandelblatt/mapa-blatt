@@ -1,0 +1,35 @@
+{
+  "id": "operacoes-estoque",
+  "order": 0,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "title": "Produção e estoque",
+  "description": "Quanto produzir, onde guardar e quando repor.",
+  "status": "afazer",
+  "owner": "s2",
+  "notes": "Regra inicial: produzir 50 por estampa, repor quando sobrar 15.",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794009600000,
+  "boardOrder": 1013,
+  "checklist": [
+    {
+      "id": "wxfogo4m",
+      "t": "Planilha de estoque por tamanho",
+      "done": true,
+      "at": 1794142800000,
+      "owner": "s2",
+      "due": "2026-11-13",
+      "doneAt": 1794574800000
+    },
+    {
+      "id": "vn4a4wfh",
+      "t": "Definir ponto de reposição",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-26"
+    }
+  ]
+}

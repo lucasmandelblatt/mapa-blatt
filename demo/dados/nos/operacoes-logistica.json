@@ -1,0 +1,35 @@
+{
+  "id": "operacoes-logistica",
+  "order": 1,
+  "parent": "operacoes",
+  "colorIndex": null,
+  "title": "Logística e fulfillment",
+  "description": "Embalagem, frete e prazo de entrega.",
+  "status": "ideia",
+  "owner": "s2",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794463200000,
+  "boardOrder": 1014,
+  "checklist": [
+    {
+      "id": "4l1vfz3z",
+      "t": "Comparar 3 integradores de frete",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-25"
+    },
+    {
+      "id": "fkkibj3j",
+      "t": "Escolher a embalagem (envelope kraft)",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-11-30",
+      "cost": 320
+    }
+  ]
+}

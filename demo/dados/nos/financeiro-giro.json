@@ -1,0 +1,25 @@
+{
+  "id": "financeiro-giro",
+  "order": 2,
+  "parent": "financeiro",
+  "colorIndex": null,
+  "title": "Caixa",
+  "description": "Entradas e saídas do caixa, semana a semana.",
+  "status": "",
+  "owner": "s2",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1793930400000,
+  "checklist": [
+    {
+      "id": "0ce9uvw5",
+      "t": "Projeção de caixa até fevereiro",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-28"
+    }
+  ]
+}

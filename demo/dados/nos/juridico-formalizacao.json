@@ -1,0 +1,40 @@
+{
+  "id": "juridico-formalizacao",
+  "order": 0,
+  "parent": "juridico",
+  "colorIndex": null,
+  "pos": {
+    "x": -47.8,
+    "y": -29.6,
+    "z": 3
+  },
+  "title": "Formalização da empresa",
+  "description": "Abrir a empresa e deixar tudo regular.",
+  "status": "afazer",
+  "owner": "ambos",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794092400000,
+  "boardOrder": 1007,
+  "checklist": [
+    {
+      "id": "9ri19r0w",
+      "t": "Escolher o tipo de empresa com o contador",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "ambos",
+      "due": "2026-11-23",
+      "flag": "atencao"
+    },
+    {
+      "id": "yojfljoo",
+      "t": "Abrir conta PJ",
+      "done": false,
+      "at": 1794402000000,
+      "owner": "s2",
+      "due": "2026-11-30"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "comercial-recorrencia",
+  "order": 2,
+  "parent": "comercial",
+  "colorIndex": null,
+  "title": "Relacionamento e recorrência",
+  "description": "Fazer quem comprou voltar.",
+  "status": "ideia",
+  "owner": "",
+  "notes": "",
+  "files": [],
+  "links": [],
+  "createdAt": 1791378000000,
+  "updatedAt": 1794715200000,
+  "boardOrder": 1003,
+  "checklist": [
+    {
+      "id": "dn581u33",
+      "t": "Ideia: cupom na segunda compra",
+      "done": false,
+      "at": 1794402000000,
+      "due": "2026-12-16"
+    }
+  ]
+}
