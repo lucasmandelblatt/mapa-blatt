@@ -1,6 +1,6 @@
 # 00-BIBLIA: o que o Sistema Blatt é (fonte única)
 
-Versão: 16/11/2026. Descreve o estado vigente deste repositório. Regra: se o código muda, muda primeiro o `01-DECISOES` e depois este arquivo, nas seções afetadas. Etiquetas: `[D-xxx]`, `[H-xx]`, `[proposta]`, `[levantado: data]`, `[relatado: fonte]` (ver `01-DECISOES.md`). **Aprovado pelo Lucas em 16/11/2026; atualizado no mesmo dia com D-017, ainda sem a revisão dele.**
+Versão: 16/11/2026. Descreve o estado vigente deste repositório. Regra: se o código muda, muda primeiro o `01-DECISOES` e depois este arquivo, nas seções afetadas. Etiquetas: `[D-xxx]`, `[H-xx]`, `[proposta]`, `[levantado: data]`, `[relatado: fonte]` (ver `01-DECISOES.md`). **Aprovado pelo autor em 16/11/2026; atualizado no mesmo dia com D-017, ainda sem a revisão dele.**
 
 As referências apontam para arquivos e nomes no código, não para números de linha, que mudam a cada edição.
 
@@ -23,7 +23,7 @@ As referências apontam para arquivos e nomes no código, não para números de 
 
 **Abas** [levantado: 16/11/2026, `src/main.js`, `LEIA-ME.md`]:
 - **Sistema:** mapa 3D. A marca é o sol, as áreas são planetas e os tópicos são estrelas. Arrastar gira o mapa; arrastar um planeta leva as estrelas junto; soltar uma estrela perto de outro planeta muda a órbita dela. O botão direito cria, renomeia, colore, move e apaga. [D-002]
-- **Quadro:** cada estrela vira um card num quadro de cinco colunas fixas (Ideia, A fazer, Em andamento, Em aprovação, Feito), vindas do Trello que o Lucas usa no trabalho, com filtro por área. [C-04]
+- **Quadro:** cada estrela vira um card num quadro de cinco colunas fixas (Ideia, A fazer, Em andamento, Em aprovação, Feito), vindas do Trello que o autor usa no trabalho, com filtro por área. [C-04]
 - **Controle:** o checklist de cada bloco, com responsável, prazo, destaque (normal, atenção, urgente), observação e anexos por tarefa. Mostra atrasos, uma linha do tempo até a entrega final e um calendário mensal clicável com todos os prazos. [D-009] [D-013] [D-014]
 - **Índice:** todas as áreas e tópicos em lista, com prazo e custo.
 - **Painel de cada bloco:** abre em meia tela, com botão de tela cheia [D-003]; resumo, plano (objetivo, estratégia, horizonte, prioridade, datas, custos), etapas, notas, fotos, arquivos e links.
@@ -113,7 +113,7 @@ Demonstração: scripts/artefato.mjs -> docs/demo/index.html (só leitura, dados
 ### 4.3 Pendências
 | ID | Item | Estado |
 |---|---|---|
-| P-01 | Confirmar C-01 a C-07 com as palavras do Lucas | Feito em 16/11/2026; documentos aprovados no mesmo dia |
+| P-01 | Confirmar C-01 a C-07 com as palavras do autor | Feito em 16/11/2026; documentos aprovados no mesmo dia |
 | P-02 | Criar testes automáticos para datas, salvamento e anexos | Aberto |
 | P-03 | O último backup com mudanças era de 29/10: confirmar no repositório privado se o sistema está em uso (H-01) | Aberto |
 | P-04 | Testar no Windows (H-02) | Aberto |

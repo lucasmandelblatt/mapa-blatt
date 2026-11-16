@@ -16,7 +16,7 @@ O repositório vem **em branco**: ao instalar, o sistema abre só com o sol "Sua
 
 ## Sobre o projeto
 
-Construído por Lucas Mandelblatt entre 11/10 e 28/10/2026, com o Claude Code, para organizar a Blatt. Começou como um mapa estático e virou o sistema que os dois sócios usam: um no Mac, outro no Windows.
+Construído pelo autor entre 11/10 e 28/10/2026, com o Claude Code, para organizar a Blatt. Começou como um mapa estático e virou o sistema que os dois sócios usam: um no Mac, outro no Windows.
 
 | Documento | O que tem |
 |---|---|

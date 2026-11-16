@@ -1,17 +1,17 @@
-# 01-DECISOES: o que o Lucas decidiu no Sistema Blatt
+# 01-DECISOES: o que o autor decidiu no Sistema Blatt
 
-Registro retroativo (16/11/2026) das decisões de produto e de arquitetura do Sistema Blatt. **Aprovado pelo Lucas em 16/11/2026; D-017 foi acrescentada no mesmo dia e ainda não passou pela revisão dele.** Mudança nova entra primeiro aqui, com fala e data, e depois na `00-BIBLIA`.
+Registro retroativo (16/11/2026) das decisões de produto e de arquitetura do Sistema Blatt. **Aprovado pelo autor em 16/11/2026; D-017 foi acrescentada no mesmo dia e ainda não passou pela revisão dele.** Mudança nova entra primeiro aqui, com fala e data, e depois na `00-BIBLIA`.
 
-**Como ler.** Datas e horas em horário de Brasília. A fala literal é do Lucas, copiada das conversas com o Claude Code em que o sistema foi construído; a leitura e o efeito são interpretação explícita de quem documentou. Estados: Confirmada · Parcial · Revertida · Pendente. Nesta versão pública, o nome do sócio nas falas aparece como [sócio].
+**Como ler.** Datas e horas em horário de Brasília. A fala literal é do autor, copiada das conversas com o Claude Code em que o sistema foi construído; a leitura e o efeito são interpretação explícita de quem documentou. Estados: Confirmada · Parcial · Revertida · Pendente. Nesta versão pública, o nome do sócio nas falas aparece como [sócio].
 
-**Etiquetas** (as mesmas nos três arquivos): `[D-001]` decisão do Lucas · `[H-01]` hipótese em aberto · `[proposta]` sugestão da IA ainda não validada (ou aceita só pelo uso) · `[levantado: data]` fato conferido no código ou em arquivo · `[relatado: fonte]` fato vindo de um registro, não reconferido.
+**Etiquetas** (as mesmas nos três arquivos): `[D-001]` decisão do autor · `[H-01]` hipótese em aberto · `[proposta]` sugestão da IA ainda não validada (ou aceita só pelo uso) · `[levantado: data]` fato conferido no código ou em arquivo · `[relatado: fonte]` fato vindo de um registro, não reconferido.
 
 ## 1. Decisões
 
 ### D-001 · 11/10 17:19 · Trazer o Mapa da Blatt para o Claude Code
 **Origem [levantado: 16/11/2026, `Mapa da Blatt.md`]:** o sistema nasceu como um artefato no claude.ai, um "mapa neutro do que a Blatt precisa para funcionar", com 8 áreas, donos e status.
 **Fala:** "Dessa maneira você consegue ver?" (enviando o arquivo do mapa) e, logo depois, "Sim, faça isso."
-**Leitura:** o Lucas levou o mapa estático para o Claude Code, onde ele virou um sistema que se edita e se salva.
+**Leitura:** o autor levou o mapa estático para o Claude Code, onde ele virou um sistema que se edita e se salva.
 **Estado:** Confirmada.
 
 ### D-002 · 11/10 23:46 · Sistema solar em vez de mapa
@@ -40,7 +40,7 @@ Registro retroativo (16/11/2026) das decisões de produto e de arquitetura do Si
 
 ### D-007 · 17/10 16:57 e 25/10 20:53 · Navegador normal, não artefato
 **Fala:** "Não se preocupe com artefato. Quero só o navegador normal." / "Não quero artefato. Quero visualizar o sistema correto, editável e atualizado."
-**Leitura:** o artefato do Claude só mostra; o Lucas queria editar e salvar. O sistema passou a rodar como servidor próprio, aberto no navegador.
+**Leitura:** o artefato do Claude só mostra; o autor queria editar e salvar. O sistema passou a rodar como servidor próprio, aberto no navegador.
 **Efeito:** `server.mjs` em `http://localhost:4747`. A cópia só de leitura continua possível pelo `scripts/artefato.mjs`, e é dela que sai a demonstração pública (D-016).
 **Estado:** Confirmada.
 
@@ -61,7 +61,7 @@ Registro retroativo (16/11/2026) das decisões de produto e de arquitetura do Si
 
 ### D-011 · 26/10 22:27–22:28 · Supabase como banco; GitHub para o código e o backup
 **Fala:** "Agora quero implementar um banco de dados gratuito para armazenar os dados, imagens, edições do meu sistema blatt. O que vc me recomenda" / "Pode implementar o Supabase como banco de dados do Sistema Blatt, mantendo o GitHub para o código e o backup diário."
-**Leitura:** o Supabase foi a recomendação da IA `[proposta]`, aceita pelo Lucas na fala seguinte.
+**Leitura:** o Supabase foi a recomendação da IA `[proposta]`, aceita pelo autor na fala seguinte.
 **Efeito:** `supabase.mjs` (banco, Storage e tempo real, sem dependências); tabelas `nos`, `dias` e `lixeira`; Storage `anexos`; backup diário por GitHub Action (`.github/workflows/backup.yml`, 3h de Brasília).
 **Estado:** Confirmada.
 
@@ -99,38 +99,38 @@ Registro retroativo (16/11/2026) das decisões de produto e de arquitetura do Si
 **Estado:** Confirmada.
 
 ## 2. Confirmações de 16/11/2026 (decisões antes sem fala literal)
-Estes itens já existiam no código, mas sem a fala literal da decisão. O Lucas respondeu em 16/11/2026, por escrito. São confirmações de hoje sobre escolhas passadas, não falas da época. A fala está copiada como ele escreveu; só foram corrigidos erros de digitação que não mudam o sentido.
+Estes itens já existiam no código, mas sem a fala literal da decisão. O autor respondeu em 16/11/2026, por escrito. São confirmações de hoje sobre escolhas passadas, não falas da época. A fala está copiada como ele escreveu; só foram corrigidos erros de digitação que não mudam o sentido.
 
 ### C-01 · Servidor em Node sem dependências
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Foi pela facilidade de instalação, para que o meu sócio consiga usar o software comigo."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Foi pela facilidade de instalação, para que o meu sócio consiga usar o software comigo."
 **Estado:** Confirmada. Liga-se a D-004.
 
 ### C-02 · Lixeira: nada é apagado de vez
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Sim. Caso algum item seja deletado sem querer, ou arrependimento, ou um dos sócios precise consultar aquele arquivo que foi deletado, o sistema oferece uma segurança que permite recuperar aquele arquivo, podendo ser encontrado na lixeira, evitando possíveis problemas mais sérios."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Sim. Caso algum item seja deletado sem querer, ou arrependimento, ou um dos sócios precise consultar aquele arquivo que foi deletado, o sistema oferece uma segurança que permite recuperar aquele arquivo, podendo ser encontrado na lixeira, evitando possíveis problemas mais sérios."
 **Estado:** Confirmada.
 
 ### C-03 · Tempo real entre os sócios
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Sim. Caso os dois estejam usando ao mesmo tempo o software, é importante que o sistema esteja atualizado em tempo real, para evitar falhas e bugs. O objetivo é ser uma ferramenta com utilização compartilhada. Para isso, deve ser atualizada a cada edição, em tempo real."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Sim. Caso os dois estejam usando ao mesmo tempo o software, é importante que o sistema esteja atualizado em tempo real, para evitar falhas e bugs. O objetivo é ser uma ferramenta com utilização compartilhada. Para isso, deve ser atualizada a cada edição, em tempo real."
 **Estado:** Confirmada.
 
 ### C-04 · As cinco colunas do Quadro
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Essa divisão veio do meu dia a dia de trabalho, no qual utilizamos o Trello e o título dos cards é dessa forma (Ideia, A fazer, Em andamento, Em aprovação, Feito). Esse formato, para o mercado de moda e varejo, funciona muito bem, pela experiência que tive no meu trabalho. Como a Blatt é uma marca de roupa, os títulos escolhidos foram esses. Mas, para cada business, o título é editável e configurado de acordo com a preferência do usuário."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Essa divisão veio do meu dia a dia de trabalho, no qual utilizamos o Trello e o título dos cards é dessa forma (Ideia, A fazer, Em andamento, Em aprovação, Feito). Esse formato, para o mercado de moda e varejo, funciona muito bem, pela experiência que tive no meu trabalho. Como a Blatt é uma marca de roupa, os títulos escolhidos foram esses. Mas, para cada business, o título é editável e configurado de acordo com a preferência do usuário."
 **Divergência com o código:** as cinco colunas são fixas no código (`STATUS` em `src/main.js`); a interface não permite renomeá-las [levantado: 16/11/2026]. Mudar os títulos hoje exige editar o código.
-**Correção (16/11/2026, reescrita pelo Lucas a partir de sugestão do Claude, depois de conferir o código):** "As colunas vieram do Trello que uso no meu trabalho, e funcionam bem para moda e varejo. Hoje elas são fixas; deixar o título editável para cada negócio é um objetivo para uma próxima versão."
-**Estado:** Confirmada: colunas fixas, vindas do Trello do trabalho do Lucas. Títulos editáveis são objetivo futuro (P-05).
+**Correção (16/11/2026, reescrita pelo autor a partir de sugestão do Claude, depois de conferir o código):** "As colunas vieram do Trello que uso no meu trabalho, e funcionam bem para moda e varejo. Hoje elas são fixas; deixar o título editável para cada negócio é um objetivo para uma próxima versão."
+**Estado:** Confirmada: colunas fixas, vindas do Trello do trabalho do autor. Títulos editáveis são objetivo futuro (P-05).
 
 ### C-05 · Senha única compartilhada
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Eu decidi. Para segurança e controle. Dois sócios compartilham a mesma senha."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Eu decidi. Para segurança e controle. Dois sócios compartilham a mesma senha."
 **Estado:** Confirmada. Liga-se a D-012.
 
 ### C-06 · Backup diário às 3h
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Não sei dizer, não tenho lembranças sobre configurações do backup."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Não sei dizer, não tenho lembranças sobre configurações do backup."
 **Estado:** Encerrada sem decisão. O backup foi pedido em D-011; o horário é `[proposta]` aceita pelo uso.
 
 ### C-07 · Responsáveis e usuários
-**Fala (resposta escrita do Lucas ao Claude Code, 16/11/2026):** "Outros usuários podem se cadastrar. É um sistema feito para uma equipe inteira de uma área ou empresa. No que eu criei existe somente "[nossos dois nomes]" pois somos só nós dois. Caso tivéssemos um terceiro sócio, ele seria incluído no software, tendo as mesmas permissões que nós dois. A plataforma permite convite de usuários apenas para visualização, mas também para edição, que seria o caso de um terceiro sócio entrando."
+**Fala (resposta escrita do autor ao Claude Code, 16/11/2026):** "Outros usuários podem se cadastrar. É um sistema feito para uma equipe inteira de uma área ou empresa. No que eu criei existe somente "[nossos dois nomes]" pois somos só nós dois. Caso tivéssemos um terceiro sócio, ele seria incluído no software, tendo as mesmas permissões que nós dois. A plataforma permite convite de usuários apenas para visualização, mas também para edição, que seria o caso de um terceiro sócio entrando."
 **Divergência com o código [levantado: 16/11/2026]:** não há cadastro de usuários, convite nem permissão de só visualização. Os responsáveis eram fixos no código; desde D-017 são dois sócios com nomes definidos no painel da empresa. O acesso é uma senha única para todos (C-05). A única versão só de visualização é a demonstração pública, com dados fictícios (D-016). Incluir um terceiro sócio hoje exige editar o código.
-**Correção (16/11/2026, reescrita pelo Lucas a partir de sugestão do Claude, depois de conferir o código):** "Hoje o sistema é para nós dois: os responsáveis estão fixos e o acesso é por uma senha compartilhada. Incluir um terceiro sócio exige mudar o código. Cadastro de usuários e convite com permissão só de leitura ou de edição são objetivos para uma próxima versão, para o sistema servir a uma equipe inteira."
+**Correção (16/11/2026, reescrita pelo autor a partir de sugestão do Claude, depois de conferir o código):** "Hoje o sistema é para nós dois: os responsáveis estão fixos e o acesso é por uma senha compartilhada. Incluir um terceiro sócio exige mudar o código. Cadastro de usuários e convite com permissão só de leitura ou de edição são objetivos para uma próxima versão, para o sistema servir a uma equipe inteira."
 **Estado:** Confirmada: dois sócios (nomes configuráveis desde D-017) e senha compartilhada. Cadastro e convites com permissão são objetivo futuro (P-06).
 
 ## 3. Reversões
